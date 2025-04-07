@@ -52,6 +52,9 @@ par(mfrow = c(2, 2))
          xaxt = "n",
          xlab = "datetime",
          ylab = "Global_reactive_power")
+    axis.POSIXct(1, 
+                 at = seq(min(data$DateTime), max(data$DateTime)+86400, by = "day"), 
+                 format = "%a")
     
   dev.off()
   
